@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="SwaggerUI" />
+        <title>Agrotention | Dokumentasi API</title>
+        <link rel="stylesheet" href="style/index.css" />
+    </head>
+    <body>
+        <div id="swagger-ui"></div>
+        <script src="script/index.js"></script>
+        <script>
+            window.onload = () => {
+                window.ui = SwaggerUIBundle({
+                    url: "assets/openapi/openapi.json",
+                    dom_id: "#swagger-ui",
+                });
+            };
+        </script>
+    </body>
+</html>

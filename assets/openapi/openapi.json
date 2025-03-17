@@ -1,0 +1,50 @@
+{
+    "openapi": "3.1.0",
+
+    "info": {
+        "title": "Dokumentasi Backend API Agrotention",
+        "version": "0.0.1",
+        "description": "**Agrotention API Documentation** - Dokumentasi dan spesifikasi API untuk Agrotention apps. Berisi endpoint, metode HTTP, parameter, dan contoh respons JSON untuk integrasi dengan sistem lain. Untuk autentikasi, gunakan token Bearer dalam header `Authorization`. Semua respons menggunakan format JSON dengan kode status HTTP standar."
+    },
+
+    "tags": [
+        {
+            "name": "Users",
+            "description": "Kumpulan endpoint untuk manajemen data user."
+        },
+        {
+            "name": "Admin",
+            "description": "Hanya admin yang bisa mengakses endpoint."
+        },
+        {
+            "name": "Owner",
+            "description": "Hanya pemilik data yang bisa mengakses endpoint."
+        },
+        {
+            "name": "Authorized",
+            "description": "Hanya user terautentikasi yang bisa mengakses endpoint."
+        },
+        {
+            "name": "Unauthorized",
+            "description": "Hanya user tidak terautentikasi yang bisa mengakses endpoint."
+        }
+    ],
+
+    "paths": {
+        "/users": {
+            "$ref": "paths/users/users.json"
+        },
+        "/users/{id}": {
+            "$ref": "paths/users/id.json"
+        },
+        "/users/{id}/detail": {
+            "$ref": "paths/users/id/detail.json"
+        }
+    },
+
+    "components": {
+        "requestBodies": {},
+        "responses": {},
+        "schemas": {}
+    }
+}

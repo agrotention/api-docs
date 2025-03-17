@@ -1,0 +1,10 @@
+{
+    "name": "skip",
+    "in": "query",
+    "description": "Berapa banyak user yang akan dilewati",
+    "required": true,
+    "schema": {
+        "type": "integer",
+        "format": "int64"
+    }
+}

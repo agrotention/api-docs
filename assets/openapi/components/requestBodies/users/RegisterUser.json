@@ -1,0 +1,36 @@
+{
+    "type": "object",
+
+    "properties": {
+        "email": {
+            "type": "string",
+            "format": "email",
+            "example": "johndoe12@email.com"
+        },
+        "username": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 32,
+            "example": "johndoe12"
+        },
+        "password": {
+            "type": "string",
+            "minLength": 8,
+            "example": "J0hnDoeS3cr3t"
+        },
+        "firstName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32,
+            "example": "John"
+        },
+        "lastName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 32,
+            "example": "Doe"
+        }
+    },
+
+    "required": ["email", "username", "password", "firstName"]
+}

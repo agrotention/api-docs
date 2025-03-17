@@ -1,0 +1,13 @@
+{
+    "get": {
+        "tags": ["Users", "Owner"]
+    },
+
+    "put": {
+        "tags": ["Users", "Owner"]
+    },
+
+    "delete": {
+        "tags": ["Users", "Owner"]
+    }
+}

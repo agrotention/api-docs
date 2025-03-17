@@ -1,0 +1,10 @@
+{
+    "name": "take",
+    "in": "query",
+    "description": "Berapa banyak user yang akan ditampilkan",
+    "required": true,
+    "schema": {
+        "type": "integer",
+        "format": "int64"
+    }
+}

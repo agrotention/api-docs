@@ -1,0 +1,79 @@
+{
+    "post": {
+        "tags": ["Users", "Unauthorized"],
+        "summary": "Mendaftar sebagai user baru",
+        "description": "Endpoint untuk mendaftar sebagai user baru",
+
+        "requestBody": {
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "../../components/requestBodies/users/RegisterUser.json"
+                    }
+                }
+            }
+        },
+
+        "responses": {
+            "201": {
+                "description": "CREATED",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "../../components/responses/users/Success.json"
+                        }
+                    }
+                }
+            },
+
+            "400": {
+                "description": "BAD REQUEST",
+                "content": {
+                    "text/plain": {
+                        "schema": {
+                            "$ref": "../../components/responses/errors/400.json"
+                        }
+                    }
+                }
+            },
+
+            "422": {
+                "description": "UNPROCESSABLE ENTITY",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "../../components/responses/errors/422.json"
+                        }
+                    }
+                }
+            }
+        }
+    },
+
+    "get": {
+        "tags": ["Users", "Authorized"],
+        "summary": "Mendapatkan daftar user singkat.",
+        "description": "Mendapatkan daftar user singkat dan dapat difilter dengan query param",
+        "parameters": [
+            {
+                "$ref": "../../components/parameters/users/ListUserQueryTake.json"
+            },
+            {
+                "$ref": "../../components/parameters/users/ListUserQuerySkip.json"
+            }
+        ],
+
+        "responses": {
+            "200": {
+                "description": "Daftar beberapa user",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "../../components/responses/users/ListUsers.json"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
