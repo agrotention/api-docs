@@ -27,6 +27,10 @@
         {
             "name": "Unauthorized",
             "description": "Hanya user tidak terautentikasi yang bisa mengakses endpoint."
+        },
+        {
+            "name": "Public",
+            "description": "Endpoint bisa diakses secara publik ."
         }
     ],
 
