@@ -1,3 +1,3 @@
 # Dokumentasi API Agrotention
 
-OpenAPI
+> [Lihat dokumentasi](https://agrotention.github.io/api-docs/)
