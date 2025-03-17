@@ -13,6 +13,10 @@
             "description": "Kumpulan endpoint untuk manajemen data user."
         },
         {
+            "name": "Authentication",
+            "description": "Kumpulan endpoint untuk pengelolaan autentikasi user."
+        },
+        {
             "name": "Admin",
             "description": "Hanya admin yang bisa mengakses endpoint."
         },
@@ -44,11 +48,5 @@
         "/users/{id}/detail": {
             "$ref": "paths/users/id/detail.json"
         }
-    },
-
-    "components": {
-        "requestBodies": {},
-        "responses": {},
-        "schemas": {}
     }
 }

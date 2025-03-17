@@ -1,5 +1,43 @@
 {
     "get": {
-        "tags": ["Users"]
+        "tags": ["Users", "Authorized"],
+        "summary": "Detail publik user.",
+        "description": "Menampilkan detail publik user berdasarkan id",
+
+        "parameters": [
+            {
+                "$ref": "../../components/parameters/users/UserPathId.json"
+            }
+        ],
+
+        "responses": {
+            "200": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "../../components/responses/users/PublicDetailUser.json"
+                        }
+                    }
+                }
+            },
+            "404": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "../../components/responses/errors/404.json"
+                        }
+                    }
+                }
+            },
+            "500": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "../../components/responses/errors/500.json"
+                        }
+                    }
+                }
+            }
+        }
     }
 }
